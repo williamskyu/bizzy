@@ -1,0 +1,14 @@
+<form method="POST" class="post-form">{% csrf_token %}
+  <fieldset>
+    <legend>Enter Discount Information:</legend>
+    <br>
+    Discount Type:<br>
+    <input type="radio" name="couponType" id="couponType" value="D" checked> Flat Amount<br>
+    <input type="radio" name="couponType" id="couponType" value="%"> Percent<br><br>
+    Discount Value:<br>
+    <input type="number" step="0.01" name="couponVal" id="couponVal" value="0"><br><br>
+    Minimum Amount (0 for none):<br>
+    <input type="number" step="0.01" name="minimumAmt" id="minimumAmt" value="0"><br><br><br>
+    <button type="submit" class="save btn btn-default">Create Coupon</button>
+  </fieldset> 
+</form>
